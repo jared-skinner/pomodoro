@@ -11,7 +11,7 @@ count="$1"
 work=25
 play=3
 
-work_seconds=`expr $work * 60`
+work_seconds=$(expr $work \* 60)
 
 if (( $# == 0 ))
 then
@@ -34,7 +34,7 @@ do
 	then
 		for (( j = 0; j < play; j++))
 		do
-			left=`expr $play - $j`
+			left=$(expr $play - $j)
 			message "Break: $left minutes remaining."
 			sleep 60
 		done
