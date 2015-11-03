@@ -1,31 +1,59 @@
 #! /bin/bash
-
 #this script is used as a timer for the pomororo method.
 
-count="$1"
+message () 
+{
+	notify-send "$1"
+	echo $1
+}
 
-for (( i = 1; i <= $count; i++))
+count="$1"
+work=25
+play=3
+
+work_seconds=`expr $work * 60`
+
+if (( $# == 0 ))
+then
+	echo ""
+	echo "usage ./pomodoro.sh <n>"
+	echo ""
+	echo "where <n> is the number of cycles you wish to run pomodoro"
+	echo ""
+
+	exit
+fi
+
+message "Start working!"
+
+for (( i = 1; i <= count; i++))
 do
-	notify-send "start working!"
-	sleep 1500
+	sleep $work_seconds
 
 	if (( i < count ))
 	then
-		notify-send "break! - 5 minutes remaining"
+		for (( j = 0; j < play; j++))
+		do
+			left=`expr $play - $j`
+			message "Break: $left minutes remaining."
+			sleep 60
+		done
 
-		sleep 60
-		notify-send "4 minutes remaining"
-
-		sleep 60
-		notify-send "3 minutes remaining"
-
-		sleep 60
-		notify-send "2 minutes remaining"
-
-		sleep 60
-		notify-send "1 minutes remaining"
-
-		sleep 60
-		notify-send "back to work!"
+		message "Back to work!"
 	fi
 done
+
+
+
+#todo:  add in a count down in the terminal
+#!/bin/bash
+#sek=60
+#echo "$sek Seconds Wait!"
+#while [ $sek -ge 1 ]
+#do
+#   echo -ne "One Moment please $sek ... \r"
+#   sleep 1
+#   sek=$[$sek-1]
+#done
+#echo
+#echo "ready!"
