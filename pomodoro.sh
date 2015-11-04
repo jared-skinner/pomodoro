@@ -9,7 +9,7 @@ message ()
 
 count="$1"
 work=25
-play=3
+play=5
 
 work_seconds=$(expr $work \* 60)
 
