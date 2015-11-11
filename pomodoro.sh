@@ -43,7 +43,7 @@ do
 	fi
 done
 
-
+message "Stop working!"
 
 #todo:  add in a count down in the terminal
 #!/bin/bash
