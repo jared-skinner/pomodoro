@@ -61,7 +61,7 @@ font: 75 14pt &quot;DejaVu Sans Mono&quot;;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/~/pomodoro/gui/pomodoro.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(/home/jared/pomodoro/gui/pomodoro.png);</string>
+     <string notr="true">background-image: url(:/images/pomodoro.png);</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
