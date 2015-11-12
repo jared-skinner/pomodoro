@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="~/pomodoro/gui">
+    <file>new.qrc</file>
+    <file>pomodoro.png</file>
+  </qresource>
+  <qresource prefix="newPrefix"/>
+</RCC>
